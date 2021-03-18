@@ -1,0 +1,152 @@
+// Colors
+
+// hsl - hue, saturation and lightness
+
+$Violet: hsl(257, 40%, 49%);
+
+$SoftMagenta: hsl(300, 69%, 71%);
+
+$HeadingsFontFamily:'Poppins',sans-serif;
+
+$BodyFontFamily:'Open Sans',sans-serif;
+
+// Universal Affects
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $BodyFontFamily;
+    background-image: url(../images/bg-desktop.svg);
+    background-color: $Violet;
+    background-repeat: no-repeat;
+
+    // If we use background-size: cover; it will cut off the sides of the image, preserving the aspect ratio, and also filling in the space.
+    background-size: cover;
+
+    background-position: center;
+    overflow-x: hidden;
+}
+
+a,a:hover{
+    text-decoration: none;
+    color: lightyellow;
+}
+
+button{
+    font-family: $BodyFontFamily;
+}
+
+button:focus{
+    outline: none;
+}
+
+.logo{
+
+    img{
+        width: 200px;
+    }
+
+}
+
+h1{
+    font-family: $HeadingsFontFamily;
+    font-weight: 600;
+}
+
+p{
+    color: lightgrey;
+    letter-spacing: 0.4px;
+}
+
+.btn{
+    border-radius: 25px;
+    width: 170px;
+    color: $Violet;
+    border-color: white;
+
+    &:hover{
+        background-color: $SoftMagenta;
+        color: white;
+        border-color: violet;
+    }
+}
+
+.social-media-icons{
+    .fa-facebook,
+    .fa-twitter,
+    .fa-instagram{
+        font-size: 0.4rem;
+
+        // border:size style color
+        border: 1px solid white;
+
+        border-radius: 25px;
+        margin: 20px;
+        width:40px;
+        height:32px;
+    }
+
+    .fa-facebook:hover,.fa-twitter:hover,.fa-instagram:hover{
+        color: $SoftMagenta!important;
+        border-color: lightpink;
+    }
+}
+
+// Media Queries
+// On XS Screens
+@media only screen and (max-width:600px){
+    body{
+        background-image: url(../images/bg-mobile.svg);
+        background-color: $Violet;
+        background-repeat: no-repeat;
+
+        // If we use background-size: cover; it will cut off the sides of the image, preserving the aspect ratio, and also filling in the space.
+        background-size: cover;
+
+        background-position: center;
+    }
+    .logo{
+    
+        img{
+            width: 200px;
+        }
+    
+    }
+
+    h1{
+        font-size: 25px;
+        font-family: $HeadingsFontFamily;
+    }
+
+    .btn{
+        width: 250px;
+    }
+
+    .social-media-icons{
+        // Convert column into row
+        display: flex;
+
+        // On X-axis
+        justify-content: center;
+
+        // On Y-axis
+        align-items: flex-start;
+
+        margin-left: -50px;
+    }
+
+    footer{
+        p{
+            display: none;
+        }
+    }
+}
+
+// Media Queries
+// On Large Screens
+@media only screen and (min-width:992px){
+    .social-media-icons {
+        float: right;
+    }
+}

@@ -1,0 +1,111 @@
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(../images/bg-desktop.svg);
+  background-color: #674baf;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: lightyellow;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+button:focus {
+  outline: none;
+}
+
+.logo img {
+  width: 200px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+p {
+  color: lightgrey;
+  letter-spacing: 0.4px;
+}
+
+.btn {
+  border-radius: 25px;
+  width: 170px;
+  color: #674baf;
+  border-color: white;
+}
+
+.btn:hover {
+  background-color: #e882e8;
+  color: white;
+  border-color: violet;
+}
+
+.social-media-icons .fa-facebook,
+.social-media-icons .fa-twitter,
+.social-media-icons .fa-instagram {
+  font-size: 0.4rem;
+  border: 1px solid white;
+  border-radius: 25px;
+  margin: 20px;
+  width: 40px;
+  height: 32px;
+}
+
+.social-media-icons .fa-facebook:hover, .social-media-icons .fa-twitter:hover, .social-media-icons .fa-instagram:hover {
+  color: #e882e8 !important;
+  border-color: lightpink;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url(../images/bg-mobile.svg);
+    background-color: #674baf;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .logo img {
+    width: 200px;
+  }
+  h1 {
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+  }
+  .btn {
+    width: 250px;
+  }
+  .social-media-icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-left: -50px;
+  }
+  footer p {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .social-media-icons {
+    float: right;
+  }
+}
+/*# sourceMappingURL=main.css.map */
